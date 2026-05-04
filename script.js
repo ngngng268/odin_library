@@ -79,8 +79,11 @@ inputDialogSubmitBtn.addEventListener("click", function () {
     const titleInput = document.querySelector(".titleInput");
     const authorInput = document.querySelector(".authorInput");
     const pagesInput = document.querySelector(".pagesInput");
-    const readInput = document.querySelector(".readInput");
+    const readInput = document.querySelector('input[name="read"]:checked');
     addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, readInput.value);
+    titleInput.value = "";
+    authorInput.value = "";
+    pagesInput.value = "";
 });
 
 
