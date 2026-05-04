@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+
+.bookshelfContainer {
+    display: grid;
+    width: 100%;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 200px;
+    ;
+    gap:10px;
+}
+
+.bookshelfContainer>div {
+    border-radius: 15px;
+    border-color: orange;
+    border-style: solid;
+    padding: 10px;
+}
