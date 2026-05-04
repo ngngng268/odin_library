@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,43 @@
     <link rel="stylesheet" href="./styles.css">
     <script src="./script.js" defer></script>
 </head>
+
 <body>
     <div class="content">
-        <button class="newBook">Add a new book to the library</button>
+        <button class="newBook" command="show-modal" commandfor="inputDialog">Add a new book to the library</button>
+        <dialog id="inputDialog">
+            <form>
+                <div id="title">
+                    <label for="title">TITLE</label>
+                    <input type="text" id="title" name="title" class="titleInput" />
+                </div>
+                <div id="author">
+                    <label for="author">AUTHOR</label>
+                    <input type="text" id="author" name="author" class="authorInput"/>
+                </div>
+                <div id="pages">
+                    <label for="pages">PAGES</label>
+                    <input type="number" id="pages" name="pages" class="pagesInput"/>
+                </div>
+                <div id="read">
+                    <legend>READ STATUS</legend>
+                    <input type="radio" id="read1" name="read" value="read" class="readInput"/>
+                    <label for="read1">Read</label>
+                    <input type="radio" id="read2" name="read" value="unread" class="readInput"/>
+                    <label for="read2">Unread</label>
+                </div>
+
+            </form>
+            <button class="inputDialogSubmitBtn" commandfor="inputDialog" command="close">SUBMIT</button>
+        </dialog>
+
         <div class="bookshelf">
             <h1>Your Library</h1>
             <div class="bookshelfContainer">
-                
+
             </div>
         </div>
     </div>
 </body>
+
 </html>
